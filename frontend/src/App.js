@@ -43,6 +43,7 @@ import ProductReviews from "./component/Admin/ProductReviews";
 import Contact from "./component/layout/Contact/Contact";
 import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
+import Navbar from "./component/navbar/Navbar";
 
 function App() {
 	const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -72,7 +73,8 @@ function App() {
 
 	return (
 		<Router>
-			<Header />
+			{/* <Header /> */}
+			<Navbar />
 
 			{isAuthenticated && <UserOptions user={user} />}
 
@@ -84,6 +86,7 @@ function App() {
 
 			<Switch>
 				<Route exact path="/" component={Home} />
+				{/* <Route exact path="/" component={Navbar} /> */}
 				<Route exact path="/product/:id" component={ProductDetails} />
 				<Route exact path="/products" component={Products} />
 				<Route path="/products/:keyword" component={Products} />

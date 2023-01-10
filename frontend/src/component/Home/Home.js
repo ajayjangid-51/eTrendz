@@ -7,6 +7,7 @@ import { clearErrors, getProduct } from "../../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
+import Slider from "../Slider/Slider";
 
 const Home = () => {
 	const alert = useAlert();
@@ -29,7 +30,7 @@ const Home = () => {
 				<Fragment>
 					<MetaData title="ECOMMERCE" />
 
-					<div className="banner">
+					{/* <div className="banner">
 						<p>Welcome to Ecommerce</p>
 						<h1>FIND AMAZING PRODUCTS BELOW</h1>
 
@@ -38,7 +39,8 @@ const Home = () => {
 								Scroll <CgMouse />
 							</button>
 						</a>
-					</div>
+					</div> */}
+					<Slider />
 
 					<h2 className="homeHeading">Featured Products</h2>
 

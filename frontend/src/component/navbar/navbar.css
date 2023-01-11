@@ -18,6 +18,9 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.navbarc1 > a:hover{
+  color: var(--rd) !important;
+}
 .navbarc1>span{
   font-size: 3vh;
   font-weight: 600;

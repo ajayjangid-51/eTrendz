@@ -1,7 +1,25 @@
+:root {
+  --blk: #262222;
+  --white: #ffffff;
+  --gren:#25914b;
+  --rd:rgb(199, 54, 54);
+  --hovergrey:rgb(137, 137, 137);
+}
 * {
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	/* background: linear-gradient(transparent, #30ff00); */
+	background: rgb(165, 165, 165);
+	border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(105, 105, 105);
 }
 
 body {

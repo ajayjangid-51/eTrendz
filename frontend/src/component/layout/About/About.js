@@ -9,7 +9,7 @@ const About = () => {
 	};
 	return (
 		<div className="aboutSection">
-			<div></div>
+			{/* <div></div> */}
 			<div className="aboutSectionGradient"></div>
 			<div className="aboutSectionContainer">
 				<Typography component="h1">About Us</Typography>
@@ -29,13 +29,16 @@ const About = () => {
 					</div>
 					<div className="aboutSectionContainer2">
 						<Typography component="h2">Our Brands</Typography>
-						<a href="#" target="blank">
-							<YouTubeIcon className="youtubeSvgIcon" />
-						</a>
+						{/* <a href="#" target="blank"> */}
+						{/* <YouTubeIcon className="youtubeSvgIcon" /> */}
+						{/* What'sUpChat */}
+						{/* </a> */}
 
-						<a href="https://instagram.com/" target="blank">
-							<InstagramIcon className="instagramSvgIcon" />
-						</a>
+						{/* <a href="https://instagram.com/" target="blank"> */}
+						{/* <InstagramIcon className="instagramSvgIcon" />
+							//  */}
+						{/* YouFlix */}
+						{/* </a> */}
 					</div>
 				</div>
 			</div>

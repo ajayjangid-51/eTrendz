@@ -12,7 +12,7 @@ import { useAlert } from "react-alert";
 import { logout } from "../../../actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
 
-const UserOptions = ({ user }) => {
+const UserOptions = ({ isAuth, user }) => {
 	const { cartItems } = useSelector((state) => state.cart);
 
 	const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ const UserOptions = ({ user }) => {
 		{
 			icon: (
 				<ShoppingCartIcon
-					style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+					style={{ color: cartItems.length > 0 ? "rgb(199, 54, 54)" : "unset" }}
 				/>
 			),
 			name: `Cart(${cartItems.length})`,
@@ -63,12 +63,12 @@ const UserOptions = ({ user }) => {
 
 	return (
 		<Fragment>
-			<Backdrop open={open} style={{ zIndex: "10" }} />
+			<Backdrop open={open} style={{ zIndex: "11" }} />
 			<SpeedDial
 				ariaLabel="SpeedDial tooltip example"
 				onClose={() => setOpen(false)}
 				onOpen={() => setOpen(true)}
-				style={{ zIndex: "11" }}
+				style={{ zIndex: "1000" }}
 				open={open}
 				direction="down"
 				className="speedDial"

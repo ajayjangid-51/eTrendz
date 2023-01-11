@@ -10,13 +10,14 @@
 }
 .orderSuccess > svg {
   font-size: 7vmax;
-  color: tomato;
+  color: var(--gren);
 }
 .orderSuccess > p {
   font-size: 2vmax;
 }
 .orderSuccess > a {
-  background-color: rgb(51, 51, 51);
+  background-color: var(--blk);
+  border-radius: 1vh;
   color: white;
   border: none;
   padding: 1vmax 3vmax;
@@ -24,6 +25,10 @@
   font: 400 1vmax "Roboto";
   text-decoration: none;
   margin: 2vmax;
+}
+.orderSuccess > a:hover {
+  background-color: var(--rd);
+
 }
 
 @media screen and (max-width: 600px) {

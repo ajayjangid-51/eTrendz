@@ -19,13 +19,15 @@ const MyOrders = () => {
 	const { user } = useSelector((state) => state.user);
 
 	const columns = [
-		{ field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },
+		// { field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },
+		{ field: "id", headerName: "Order ID", flex: 1 },
 
 		{
 			field: "status",
 			headerName: "Status",
-			minWidth: 150,
-			flex: 0.5,
+			// minWidth: 150,
+			flex: 1,
+			// flex: 0.5,
 			cellClassName: (params) => {
 				return params.getValue(params.id, "status") === "Delivered"
 					? "greenColor"
@@ -36,24 +38,28 @@ const MyOrders = () => {
 			field: "itemsQty",
 			headerName: "Items Qty",
 			type: "number",
-			minWidth: 150,
-			flex: 0.3,
+			// minWidth: 150,
+			flex: 1,
+			// flex: 0.3,
 		},
 
 		{
 			field: "amount",
 			headerName: "Amount",
 			type: "number",
-			minWidth: 270,
-			flex: 0.5,
+			// minWidth: 270,
+			// flex: 0.5,
+			flex: 1,
 		},
 
 		{
 			field: "actions",
-			flex: 0.3,
+			// flex: 0.3,
 			headerName: "Actions",
-			minWidth: 150,
+			// minWidth: "1vw",
 			type: "number",
+			flex: 1,
+
 			sortable: false,
 			renderCell: (params) => {
 				return (
@@ -99,7 +105,7 @@ const MyOrders = () => {
 						pageSize={10}
 						disableSelectionOnClick
 						className="myOrdersTable"
-						autoHeight
+						// autoHeight
 					/>
 
 					<Typography id="myOrdersHeading">{user.name}'s Orders</Typography>

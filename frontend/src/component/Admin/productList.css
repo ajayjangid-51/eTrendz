@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  /* border: 2px solid red; */
+  overflow: scroll;
 }
 
 #productListHeading {
@@ -36,11 +38,11 @@
 }
 
 .productListTable a:hover {
-  color: tomato;
+  color: var(--rd);
 }
 
 .productListTable button:hover {
-  color: rgb(236, 30, 30);
+  color: var(--gren);
 }
 
 .MuiDataGrid-columnHeader div {
@@ -51,4 +53,7 @@
   .productListTable div {
     font: 300 4vw "Roboto";
   }
+}
+.MuiDataGrid-columnHeader{
+  background-color: var(--blk);
 }

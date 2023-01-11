@@ -4,11 +4,14 @@
   --gren:#25914b;
   --rd:rgb(199, 54, 54);
   --hovergrey:rgb(137, 137, 137);
+  --back:rgb(231, 231, 231);
 }
 * {
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  /* background-color: rgb(231, 231, 231); */
+
 }
 ::-webkit-scrollbar {
 	width: 8px;

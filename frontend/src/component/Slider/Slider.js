@@ -2,28 +2,37 @@ import React from "react";
 import "./Slider.scss";
 const slides = [
 	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=497)",
+		eachSlide:
+			"url(https://media.istockphoto.com/photos/mens-suits-on-hangers-in-different-colors-picture-id887360960?b=1&k=20&m=887360960&s=612x612&w=0&h=E5x1cyKJGiCkpsUU6TSCuVZDtvEYo1eS8igBdp9201k=)",
 	},
 	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=291)",
+		// eachSlide: "url(https://unsplash.it/1900/1024/?image=497)",
+		eachSlide:
+			// "url(https://cdn.pixabay.com/photo/2019/12/14/08/36/shopping-4694470_960_720.jpg)",
+			"url(https://cdn.wccftech.com/wp-content/uploads/2021/07/bravo15-20210531-1-1030x644.jpeg",
 	},
 	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=786)",
+		// eachSlide: "url(https://unsplash.it/1900/1024/?image=291)",
+		eachSlide: "url(https://images.freekaamaal.com/post_images/1663061023.JPG)",
+	},
+
+	{
+		eachSlide:
+			"url(https://t4.ftcdn.net/jpg/04/32/90/49/360_F_432904947_gZo76GgLC2eeDXTZAGXKQ9W3Juk3kDLH.jpg)",
 	},
 	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=768)",
+		eachSlide:
+			"url(https://img.freepik.com/free-photo/young-handsome-man-choosing-clothes-shop_1303-19720.jpg)",
 	},
 	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=726)",
-	},
-	{
-		eachSlide: "url(https://unsplash.it/1900/1024/?image=821)",
+		eachSlide:
+			"url(https://cdn.thewirecutter.com/wp-content/media/2021/05/hair-clippers-2048px-1504.jpg)",
 	},
 ];
 
 const Slider = () => {
 	const [active, setActive] = React.useState(0);
-	const [autoplay, setAutoplay] = React.useState(0);
+	const [autoplay, setAutoplay] = React.useState(1);
 	const max = slides.length;
 
 	const intervalBetweenSlides = () =>

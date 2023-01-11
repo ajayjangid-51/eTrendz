@@ -46,5 +46,23 @@
 }
 
 .MuiTypography-root {
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
+}
+
+.sidebarc3 a{
+  /* text-decoration: "none";
+   */
+   text-decoration: none !important;
+   color: var(--blk);
+   /* background: yellow !important; */
+   /* background: none; */
+   /* background-color: ; */
+   /* background-color: transparent !important; */
+   background-color: "yellow" !important;
+
+}
+.sidebarc3 a:hover{
+  /* background-color: "yellow" !important;
+   */
+   background: "black" !important;
 }

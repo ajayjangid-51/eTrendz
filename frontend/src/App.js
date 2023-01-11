@@ -76,22 +76,22 @@ function App() {
 			{/* <Header /> */}
 			<div
 				className="nav"
-				style={
-					{
-						// border: "2px solid green",
-						// height: "200px",
-					}
-				}
+				style={{
+					// border: "2px solid green",
+					// height: "200px",
+					position: "sticky",
+					top: 0,
+					zIndex: 100000,
+				}}
 			>
 				<Navbar isAuth={isAuthenticated} user={user} />
 
 				{/* {isAuthenticated && <UserOptions user={user} />} */}
-
-				{stripeApiKey && (
+				{/* {stripeApiKey && (
 					<Elements stripe={loadStripe(stripeApiKey)}>
 						<ProtectedRoute exact path="/process/payment" component={Payment} />
 					</Elements>
-				)}
+				)} */}
 			</div>
 
 			<div
@@ -211,6 +211,15 @@ function App() {
 						isAdmin={true}
 						component={ProductReviews}
 					/>
+					{stripeApiKey && (
+						<Elements stripe={loadStripe(stripeApiKey)}>
+							<ProtectedRoute
+								exact
+								path="/process/payment"
+								component={Payment}
+							/>
+						</Elements>
+					)}
 
 					<Route
 						component={

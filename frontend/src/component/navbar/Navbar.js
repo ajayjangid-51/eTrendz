@@ -11,8 +11,10 @@ import { grey } from "@mui/material/colors";
 import UserOptions from "../layout/Header/UserOptions";
 import { useState } from "react";
 import Search from "../Product/Search";
+import { useHistory } from "react-router-dom";
 
 function Navbar({ isAuth, user }) {
+	const history = useHistory();
 	const [search, setSearch] = useState(true);
 	return (
 		<div className="navbar">
@@ -74,7 +76,7 @@ function Navbar({ isAuth, user }) {
 					{search && (
 						// <h1 style={{ color: "red" }}>
 						// 	{" "}
-						<Search />
+						<Search history={history} />
 						// </h1>
 					)}
 				</div>

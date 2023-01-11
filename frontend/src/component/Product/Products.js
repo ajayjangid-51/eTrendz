@@ -67,16 +67,129 @@ const Products = ({ match }) => {
 			) : (
 				<Fragment>
 					<MetaData title="PRODUCTS -- ECOMMERCE" />
-					<h2 className="productsHeading">Products</h2>
+					<div
+						className="productss"
+						style={{
+							display: "flex",
+							height: "86vh",
+							justifyContent: "space-between",
+							width: "100%",
+							padding: "0vh 2vh",
+						}}
+					>
+						<div
+							className="productsc1"
+							style={{
+								display: "flex",
+								flexDirection: "column",
+								borderRight: "2px solid grey",
+								height: "100%",
+								flex: "0.25",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
+							<div className="filterBox">
+								<div className="filterBox1">
+									<Typography
+										style={{
+											fontWeight: "bold",
+											fontSize: "3vh",
+										}}
+									>
+										Price
+									</Typography>
+									<Slider
+										value={price}
+										onChange={priceHandler}
+										valueLabelDisplay="auto"
+										aria-labelledby="range-slider"
+										min={0}
+										max={25000}
+									/>
+								</div>
+								<div className="filterBox2">
+									<Typography
+										style={{
+											fontWeight: "bold",
+											fontSize: "3vh",
+										}}
+									>
+										Categories
+									</Typography>
+									<ul className="categoryBox">
+										{categories.map((category) => (
+											<li
+												className="category-link"
+												key={category}
+												onClick={() => setCategory(category)}
+												style={{
+													fontSize: "2vh",
+													fontWeight: "600",
+													color: "var(--rd)",
+												}}
+												// onMouseOver="this.style.color ='#F8F8F8'"
+											>
+												- {category}
+											</li>
+										))}
+									</ul>
+								</div>
+								<div className="filterBox3">
+									<fieldset>
+										<Typography
+											component="legend"
+											style={{
+												fontWeight: "bold",
+												fontSize: "3vh",
+											}}
+										>
+											Ratings
+										</Typography>
+										<Slider
+											value={ratings}
+											onChange={(e, newRating) => {
+												setRatings(newRating);
+											}}
+											aria-labelledby="continuous-slider"
+											valueLabelDisplay="auto"
+											min={0}
+											max={5}
+										/>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+						<div
+							className="productsc2"
+							style={{
+								flex: "1 1 0%",
+								display: "flex",
+								flexDirection: "column",
+								alignItems: "center",
+								marginLeft: "1vw",
+							}}
+						>
+							<div className="productsHeading">Products</div>
+
+							<div className="products">
+								{products &&
+									products.map((product) => (
+										<ProductCard key={product._id} product={product} />
+									))}
+							</div>
+						</div>
+					</div>
+
+					{/* <div className="productsHeading">Products</div>
 
 					<div className="products">
 						{products &&
 							products.map((product) => (
 								<ProductCard key={product._id} product={product} />
 							))}
-					</div>
-
-					<div className="filterBox">
+					</div> */}
+					{/* <div className="filterBox">
 						<Typography>Price</Typography>
 						<Slider
 							value={price}
@@ -113,8 +226,9 @@ const Products = ({ match }) => {
 								max={5}
 							/>
 						</fieldset>
-					</div>
-					{1 < count && (
+					</div> */}
+
+					{null && (
 						<div className="paginationBox">
 							<Pagination
 								activePage={currentPage}

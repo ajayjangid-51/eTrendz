@@ -2,7 +2,7 @@
 
 Ecommerce Online Store
 
-# I developed this E-Commerce web application using the MERN stack (MongoDB, Express.js, React, and Node.js). The application features a user-friendly interface that allows customers to browse and purchase products, add items to a shopping cart, and complete transactions using a secure checkout process.
+I developed this E-Commerce web application using the MERN stack (MongoDB, Express.js, React, and Node.js). The application features a user-friendly interface that allows customers to browse and purchase products, add items to a shopping cart, and complete transactions using a secure checkout process.
 
 I implemented server-side rendering with Express.js to improve the performance and SEO of the website. I used MongoDB to store the product and user data, and used Mongoose for data modeling and validation.
 

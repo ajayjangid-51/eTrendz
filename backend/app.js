@@ -33,7 +33,7 @@ app.use("/api/v1", payment);
 
 app.get("*", (req, res) => {
 	// res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-	res.send("hi");
+	res.send("hi, welcome to etrendzwebservice");
 });
 
 // Middleware for Errors

@@ -1,4 +1,4 @@
-const app = require("./app");
+/* const app = require("./app");
 const cloudinary = require("cloudinary");
 const connectDatabase = require("./config/database");
 
@@ -36,4 +36,51 @@ process.on("unhandledRejection", (err) => {
 	server.close(() => {
 		process.exit(1);
 	});
+});
+ */
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+
+const app = express();
+dotenv.config();
+const MONGO_ATLAS =
+	"mongodb+srv://icode511:ch57v3TzccQPU1HD@cluster0.lr8zze5.mongodb.net/";
+
+const connect = () => {
+	mongoose
+		// .connect(process.env.MONGO_ATLAS)
+		.connect(MONGO_ATLAS)
+		.then(() => {
+			console.log("Connected to DB");
+		})
+		.catch((err) => {
+			console.log("error in connecting monogodb");
+			throw err;
+		});
+};
+
+//middlewares
+app.use(cookieParser());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+	res.send("hei , hello");
+});
+
+//error handler
+app.use((err, req, res, next) => {
+	const status = err.status || 500;
+	const message = err.message || "Something went wrong!";
+	return res.status(status).json({
+		success: false,
+		status,
+		message,
+	});
+});
+
+app.listen(process.env.PORT, () => {
+	connect();
+	console.log("Connected to Server");
 });

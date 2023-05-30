@@ -39,6 +39,7 @@ const LoginSignUp = ({ history, location }) => {
 	const loginSubmit = (e) => {
 		e.preventDefault();
 		dispatch(login(loginEmail, loginPassword));
+		// dispatch()
 	};
 
 	const registerSubmit = (e) => {

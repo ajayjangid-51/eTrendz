@@ -2,11 +2,18 @@ class ApiFeatures {
 	constructor(query, queryStr) {
 		this.query = query;
 		this.queryStr = queryStr;
-		console.log("the Product.find() in apifeature is");
-		console.log(this.query);
+		// console.log("the Product.find() in apifeature is");
+		// console.log(this.query);
 	}
 
 	search() {
+		// console.log(this.queryStr);
+		if (this.queryStr.alli === "true") {
+			// this.query = this.query.find();
+			// console.log(this.query.all, "is yes");
+			return this;
+		}
+
 		const keyword = this.queryStr.keyword
 			? {
 					name: {
@@ -21,9 +28,13 @@ class ApiFeatures {
 	}
 
 	filter() {
+		if (this.queryStr.alli === "true") {
+			console.log("yes in filter true");
+			return this;
+		}
 		const queryCopy = { ...this.queryStr };
 		//   Removing some fields for category
-		const removeFields = ["keyword", "page", "limit"];
+		const removeFields = ["keyword", "page", "limit", "alli"];
 
 		removeFields.forEach((key) => delete queryCopy[key]);
 

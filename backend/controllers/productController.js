@@ -39,16 +39,17 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 });
 
 // Get All Product
+
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
-	const resultPerPage = 10;
+	const resultPerPage = 20;
 	const productsCount = await Product.countDocuments();
 
 	const apiFeature = new ApiFeatures(Product.find(), req.query)
 		.search()
 		.filter();
 
-	// let products = await apiFeature.query;
-	let products = await Product.find();
+	let products = await apiFeature.query;
+	// let products = await Product.find();
 	console.log({ message: "the products are", pro: products });
 
 	let filteredProductsCount = products.length;

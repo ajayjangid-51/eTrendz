@@ -13,11 +13,15 @@ import MetaData from "../layout/MetaData";
 const categories = [
 	"Laptop",
 	"Footwear",
-	"Bottom",
-	"Tops",
-	"Attire",
+	"trousers",
+	"tops",
+	"clothing",
 	"Camera",
 	"SmartPhones",
+	"smartwatch",
+	"tshirt",
+	"electronics",
+	"books",
 ];
 
 const Products = ({ match }) => {
@@ -57,7 +61,9 @@ const Products = ({ match }) => {
 			dispatch(clearErrors());
 		}
 
-		dispatch(getProduct(keyword, currentPage, price, category, ratings));
+		dispatch(
+			getProduct(keyword, currentPage, price, category, ratings, "false")
+		);
 	}, [dispatch, keyword, currentPage, price, category, ratings, alert, error]);
 
 	return (
@@ -66,7 +72,7 @@ const Products = ({ match }) => {
 				<Loader />
 			) : (
 				<Fragment>
-					<MetaData title="PRODUCTS -- ECOMMERCE" />
+					<MetaData title="Products -- Etrendz" />
 					<div
 						className="productss"
 						style={{
@@ -135,7 +141,28 @@ const Products = ({ match }) => {
 										))}
 									</ul>
 								</div>
-								<div className="filterBox3">
+
+								<div className="filterBox1">
+									<Typography
+										style={{
+											fontWeight: "bold",
+											fontSize: "3vh",
+										}}
+									>
+										Ratings
+									</Typography>
+									<Slider
+										value={ratings}
+										onChange={(e, newRating) => {
+											setRatings(newRating);
+										}}
+										aria-labelledby="continuous-slider"
+										valueLabelDisplay="auto"
+										min={0}
+										max={5}
+									/>
+								</div>
+								{/* <div className="filterBox3">
 									<fieldset>
 										<Typography
 											component="legend"
@@ -157,7 +184,7 @@ const Products = ({ match }) => {
 											max={5}
 										/>
 									</fieldset>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div

@@ -30,11 +30,15 @@ const NewProduct = ({ history }) => {
 	const categories = [
 		"Laptop",
 		"Footwear",
-		"Bottom",
-		"Tops",
-		"Attire",
+		"trousers",
+		"tops",
+		"clothing",
 		"Camera",
 		"SmartPhones",
+		"smartwatch",
+		"tshirt",
+		"electronics",
+		"books",
 	];
 
 	useEffect(() => {

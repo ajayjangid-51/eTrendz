@@ -15,7 +15,7 @@ import { useHistory } from "react-router-dom";
 
 function Navbar({ isAuth, user }) {
 	const history = useHistory();
-	const [search, setSearch] = useState(true);
+	const [search, setSearch] = useState(false);
 	return (
 		<div className="navbar">
 			<div className="navbarc1">
@@ -115,10 +115,12 @@ function Navbar({ isAuth, user }) {
 			</div>
 			<div
 				className="navbarc4"
-				style={{
-					// border: "1px solid red",
-					flex: "0.25",
-				}}
+				style={
+					{
+						// border: "1px solid red",
+						// flex: "0.25",
+					}
+				}
 			>
 				{isAuth && <UserOptions user={user} />}
 			</div>

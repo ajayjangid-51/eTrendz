@@ -8,10 +8,13 @@
 .speedDial:hover{
   /* border: 2px solid var(--rd); */
 }
-
+.MuiFab-label{
+  width: 49px !important;
+  height: 49px  !important;
+}
 .speedDialIcon {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 46px;
   border-radius: 100%;
   /* border: 2px solid yellow; */
 }

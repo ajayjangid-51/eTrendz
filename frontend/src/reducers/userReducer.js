@@ -56,7 +56,7 @@ export const userReducer = (state = { user: {} }, action) => {
 		case REGISTER_USER_SUCCESS:
 		case LOAD_USER_SUCCESS:
 			return {
-				...state,
+				...state, // tripledot(...) mtlb current object asitas and niche wali keys aur add krna hai esmeh.
 				loading: false,
 				isAuthenticated: true,
 				user: action.payload,

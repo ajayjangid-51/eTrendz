@@ -1,5 +1,6 @@
 import React from "react";
 import "./Slider.scss";
+import HoverProduct from "../Product/HoverProduct";
 const slides = [
 	{
 		eachSlide:
@@ -115,6 +116,7 @@ const Slider = () => {
 
 	return (
 		<section className="slider">
+			<HoverProduct />
 			<div className="wrapper" style={setSliderStyles()}>
 				{renderSlides()}
 			</div>
